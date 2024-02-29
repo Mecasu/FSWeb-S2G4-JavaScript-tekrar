@@ -39,7 +39,7 @@ const sayilar = [
 function KareninAlani(kenaruzunlugu) {
   return kenaruzunlugu * kenaruzunlugu;
 }
-console.log(KareninAlani(10));
+
 /* (Oto test yok) Yukarıdaki KareninAlani fonksiyonunu kenar uzunluğu = 10 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
 /* GÖREV 1:  
@@ -107,9 +107,9 @@ let ucetambolunenler = [],
 // 3a çözümü
 
  enbuyuk = sayilar.reduce((enbuyuk, sayi)=>  enbuyuk < sayi ? sayi : enbuyuk) 
-
- enkucuk = sayilar.reduce((enbuyuk, sayi)=>  enkucuk > sayi ? sayi : enbuyuk) 
-
+ 
+ enkucuk = sayilar.reduce((enkucuk, sayi)=>  enkucuk > sayi ? sayi : enkucuk) 
+ 
 // 3b çözümü:
 
  sayilar.forEach((deger)=> { 
@@ -139,9 +139,10 @@ for (let i = 0; i< sayilar.length ; i++){
     if (sayilar[i]=== sayilar[j]){
     counter++;
    }
+   tekraredensayilar.push(`${sayilar[i]} sayısı ${counter} kere tekrar edilmiştir`)
    }
   
-    tekraredensayilar.push(`${sayilar[i]} sayısı ${counter} kere tekrar edilmiştir`)
+    
 }
 
 
@@ -149,6 +150,7 @@ for (let i = 0; i< sayilar.length ; i++){
 
 function sa() {
   console.log("Kodlar çalışıyor");
+
   return "as";
 }
 sa();
