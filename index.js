@@ -112,7 +112,11 @@ let ucetambolunenler,
 
 // 3b çözümü:
 
-ucetambolunenler = sayilar.forEach((deger)=>  deger % 3 == 0);
+ sayilar.forEach((deger)=> { 
+  if(deger % 3 == 0){
+    ucetambolunenler.push(deger);
+  }
+});
 
 // 3c çözümü:
 
