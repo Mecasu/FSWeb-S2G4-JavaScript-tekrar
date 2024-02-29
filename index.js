@@ -132,7 +132,18 @@ siralisayilar = besyuzdenkucuksayilar.sort((a, b)=> a - b);
 
 // 3f çözümü
 
-// WIP 
+let counter = 0;
+
+for (let i = 0; i< sayilar.length ; i++){
+  for (let j = 0; i< sayilar.length ; i++){
+    if (sayilar[i]=== sayilar[j]){
+    counter++;
+   }
+   }
+  
+    tekraredensayilar.push(`${sayilar[i]} sayısı ${counter} kere tekrar edilmiştir`)
+}
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
