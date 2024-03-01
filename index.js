@@ -132,20 +132,40 @@ siralisayilar = besyuzdenkucuksayilar.sort((a, b)=> a - b);
 
 // 3f çözümü
 
-let counter = 0;
+ 
+tekraredensayilar = [];
+const tekrarSayisi = {};
 
-for (let i = 0; i< sayilar.length ; i++){
+sayilar.forEach(sayi => {
+  if (!tekrarSayisi[sayi]) {
+tekrarSayisi[sayi] = 1;
+  } else {
+tekrarSayisi[sayi] += 1;
+  }
+});
+
+for (let sayi in tekrarSayisi) {
+  if (tekrarSayisi[sayi] > 1) {
+  tekraredensayilar.push(`${sayi} sayısı ${tekrarSayisi[sayi]} kere tekrar edilmiştir`);
+  }
+}
+
+console.log(tekraredensayilar);
+
+/*for (let i = 0; i< sayilar.length ; i++){
+  let counter = 0;
   for (let j = 0; i< sayilar.length ; i++){
     if (sayilar[i]=== sayilar[j]){
     counter++;
    }
-   tekraredensayilar.push(`${sayilar[i]} sayısı ${counter} kere tekrar edilmiştir`)
+  tekraredensayilar.push(`${sayilar[i]} sayısı ${counter} kere tekrar edilmiştir`);
+   
    }
   
     
-}
+}*/
 
-
+console.log(tekraredensayilar);
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
 function sa() {
